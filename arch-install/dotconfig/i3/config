@@ -52,6 +52,12 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec terminator
 
+# shutdown 
+bindsym $mod+p exec systemctl poweroff
+
+# reboot
+bindsym $mod+o exec systemctl reboot
+
 # kill focused window
 bindsym $mod+q kill
 
