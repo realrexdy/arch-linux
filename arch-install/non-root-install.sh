@@ -18,7 +18,7 @@ fi
 read -rp "Do you want to Setup i3-wm Desktop? (y/n): " uin
 uin=$(echo "$uin" | tr '[:upper:]' '[:lower:]')
 if [ "$uin" = "y" ]; then
-  sudo pacman -Syu xorg xorg-xinit i3 feh gcc python3 pulseaudio curl htop neofetch thunar pipewire vlc lxdm firefox alsa-utils i3status dmenu terminator lxdm
+  sudo pacman -Syu xorg xorg-xinit i3 feh gcc python3 pulseaudio curl htop neofetch thunar pipewire vlc lxdm firefox alsa-utils i3status dmenu terminator lxdm network-manager-applet
   sudo systemctl enable lxdm
   sudo systemctl enable pipewire
   touch ~/.xinitrc
