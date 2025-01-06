@@ -1,10 +1,12 @@
 #!/bin/bash
-cd $HOME/.cache/
-rm -rf *
-cd
-sudo pacman -Scc
-yay -Scc
-sudo pacman -Rs $(sudo pacman -Qtdq)
-yay -Rs $(yay -Qtdq)
-cd $HOME/.local/share/Trash/
-rm -rf *
+rm $HOME/.local/share/Trash/*
+rm -rf $HOME/.cache/*
+rm -rf $HOME/.tmp/*
+sudo rm -rf /tmp/*
+sudo rm -rf /var/tmp/*
+sudo rm -rf /var/cache/*
+echo "Removed Cache and tmp files"
+sudo pacman -Scc --noconfirm
+yay -Scc --noconfirm
+sudo pacman -Rs --noconfirm $(sudo pacman -Qtdq)
+yay -Rs --noconfirm $(yay -Qtdq)
